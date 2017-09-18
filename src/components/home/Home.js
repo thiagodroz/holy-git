@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import './Home.css';
 
 export default class Home extends Component {
   constructor(props) {
@@ -33,11 +34,12 @@ export default class Home extends Component {
 
     return (
       <div>
-        <form id="profile-search" onSubmit={ this.onFormSubmit.bind(this) }>
+        <form id="profile-search" className="profile-search" onSubmit={ this.onFormSubmit.bind(this) }>
           <input type="text"
+                 className="profile-search__input"
                  value={ this.state.userName }
                  onChange={ this.onInputChange.bind(this) } />
-          <button type="submit">Search</button> 
+          <button type="submit" className="profile-search__button">Search</button>
         </form>
       </div>
     );

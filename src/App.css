@@ -1,0 +1,11 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #13181d;
+  color: #666;
+  font-family: 'Ubuntu', sans-serif;
+}

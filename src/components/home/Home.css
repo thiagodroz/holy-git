@@ -1,0 +1,13 @@
+.profile-search {
+  margin: 0 auto;
+  width: 315px;
+}
+
+.profile-search__input {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.profile-search__button {
+  width: 100px;
+}
