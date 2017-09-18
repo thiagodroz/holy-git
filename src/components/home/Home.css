@@ -1,13 +1,31 @@
 .profile-search {
-  margin: 0 auto;
-  width: 315px;
+  width: 30rem;
+  margin: 50% auto;
 }
 
 .profile-search__input {
-  width: 200px;
+  width: 16.6rem;
+  height: 4rem;
   margin-right: 10px;
+  padding: 0 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.6rem;
+}
+
+.profile-search__input-error {
+  border: 2px solid rgba(255, 0, 0, 0.4);
 }
 
 .profile-search__button {
   width: 100px;
+  height: 4.4rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
 }

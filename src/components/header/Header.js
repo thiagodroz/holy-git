@@ -8,7 +8,9 @@ export default class Header extends Component {
         <div className="header__brand">
           Holy Git!
         </div>
-        <div className="header__menu"></div>
+        <div className="header__menu">
+          <i className="material-icons">menu</i>
+        </div>
       </header>
     );
   }

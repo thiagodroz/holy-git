@@ -1,4 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu);
+@import url(//fonts.googleapis.com/css?family=Material+Icons);
 
 html {
   font-size: 62.5%;
@@ -8,4 +9,22 @@ body {
   background-color: #13181d;
   color: #666;
   font-family: 'Ubuntu', sans-serif;
+}
+
+.material-icons {
+  display: inline-block;
+  font-feature-settings: 'liga';
+  font-family: 'Material Icons';
+  font-size: 24px;  /* Preferred icon size */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 }
