@@ -1,6 +1,6 @@
 .profile-search {
   width: 30rem;
-  margin: 50% auto;
+  margin: 37vh auto;
 }
 
 .profile-search__input {
@@ -16,6 +16,7 @@
 
 .profile-search__input-error {
   border: 2px solid rgba(255, 0, 0, 0.4);
+  outline: none;
 }
 
 .profile-search__button {

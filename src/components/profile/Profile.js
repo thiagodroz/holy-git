@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Profile.css';
 
 import Repository from '../repository/Repository';
 
@@ -41,12 +42,14 @@ export default class Profile extends Component {
       );
     });
   }
-  
+
   render() {
     return (
-      <div>
-        <h2>{ this.props.match.params.profileName }</h2>
-        <ul>
+      <div className="profile">
+        <div className="profile__header">
+          { this.props.match.params.profileName }
+        </div>
+        <ul className="profile__list">
           { this.renderRepositoryList() }
         </ul>
       </div>

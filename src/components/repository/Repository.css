@@ -1,0 +1,17 @@
+.repository {
+  height: 6rem;
+  padding: 0 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 3.5rem;
+}
+
+.repository__language-icon {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 3rem;
+  vertical-align: middle;
+}
+
+.repository__name {
+  display: inline-block;
+}
