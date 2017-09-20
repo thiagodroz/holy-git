@@ -5,6 +5,14 @@
   line-height: 3.5rem;
 }
 
+.repository:hover {
+  -webkit-transform: scale(1.015);
+  -ms-transform: scale(1.015);
+  transform: scale(1.015);
+  border: 1px solid #3e4d60;
+  background-color: #273444;
+}
+
 .repository__language-icon {
   display: inline-block;
   margin-right: 2rem;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import language from './Languages';
 import './Repository.css';
+import './Languages.css';
 
 export default class Repository extends Component {
   constructor(props) {
