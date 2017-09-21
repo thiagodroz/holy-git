@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './Menu.css';
 
 export default class Menu extends Component {
@@ -28,7 +27,7 @@ export default class Menu extends Component {
     if (isOpen && this.menuRef && !this.menuRef.contains(event.target)) {
       setTimeout(() => {
         closeMenu();
-      }, 10);
+      }, 100);
     }
   }
 

@@ -45,14 +45,14 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <div className="profile">
+      <section className="profile">
         <div className="profile__header">
           { this.props.match.params.profileName }
         </div>
         <ul className="profile__list">
           { this.renderRepositoryList() }
         </ul>
-      </div>
+      </section>
     );
   }
 }

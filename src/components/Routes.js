@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './home/Home';
 import Profile from './profile/Profile';
+import About from './about/About';
 import NotFound from './not-found/NotFound';
 
 export default class RoutesComponent extends Component {
@@ -12,6 +13,7 @@ export default class RoutesComponent extends Component {
                 <Switch>
                     <Route path="/" exact component={ Home } />
                     <Route path="/profiles/:profileName/" component={ Profile } />
+                    <Route path="/about/" component={ About } />
                     <Route path="*" component={ NotFound } />
                 </Switch>
             </Router>

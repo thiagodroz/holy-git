@@ -13,21 +13,22 @@
 }
 
 .header-menu__list {
-  width: 20rem;
   margin: 0;
   padding: 0;
   border: .1rem solid rgba(255, 255, 255, 0.2);
-  border-top: none;
+  border-bottom: none;
+  background-color: #13181d;
   list-style: none;
 }
 
 .header-menu__element {
-  width: 100%;
+  width: 20rem;
   border-bottom: .1rem solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 
 .header-menu__link {
+  display: block;
   padding: 0 2rem;
   color: #FFF;
   font-size: 2rem;
