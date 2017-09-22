@@ -6,6 +6,9 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
 
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
+
     this.state = {
       redirect: false,
       userName: '',
@@ -15,8 +18,6 @@ export default class Home extends Component {
 
   onFormSubmit(event) {
     event.preventDefault();
-
-    console.log(this.state.userName);
 
     if (this.state.userName) {
       this.setState({
@@ -49,12 +50,12 @@ export default class Home extends Component {
 
     return (
       <div>
-        <form id="profile-search" className="profile-search" onSubmit={ this.onFormSubmit.bind(this) }>
+        <form id="profile-search" className="profile-search" onSubmit={ this.onFormSubmit }>
           <input type="text"
                  className={ 'profile-search__input ' + errorClass }
                  placeholder="Github username"
                  value={ this.state.userName }
-                 onChange={ this.onInputChange.bind(this) } />
+                 onChange={ this.onInputChange } />
           <button type="submit" className="profile-search__button">Search</button>
         </form>
       </div>

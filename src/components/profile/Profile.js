@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Profile.css';
 
 import Repository from '../repository/Repository';
+import Loader from '../loader/Loader';
 
 export default class Profile extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class Profile extends Component {
     });
   }
 
-  render() {
+  renderPage() {
     return (
       <section className="profile">
         <div className="profile__header">
@@ -53,6 +54,14 @@ export default class Profile extends Component {
           { this.renderRepositoryList() }
         </ul>
       </section>
+    );
+  }
+
+  render() {
+    return (
+      <div>
+        { this.state.loading ? <Loader /> : this.renderPage() }
+      </div>
     );
   }
 }
