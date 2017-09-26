@@ -27,3 +27,6 @@ yarn.lock
 
 #Intellij
 .idea/
+
+#Ignore CSS to use SCSS
+src/**/*.css
