@@ -34,9 +34,9 @@ export default class Header extends Component {
 
     return (
       <header className="header">
-        <div className="header__brand">
+        <a href="/" className="header__brand">
           Holy Git!
-        </div>
+        </a>
         <div className="header__menu" onClick={ !menuIsOpen && this.onMenuClick }>
           <i className="material-icons">menu</i>
           <Menu isOpen={ menuIsOpen } closeMenu={ this.onCloseMenu } />

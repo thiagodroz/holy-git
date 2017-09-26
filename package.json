@@ -1,8 +1,9 @@
 {
   "name": "holy-git",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "oh-my-lib": "^0.1.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2",

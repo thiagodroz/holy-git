@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as OhMyLib from 'oh-my-lib';
 import './Profile.css';
 
 import Repository from '../repository/Repository';
@@ -20,17 +21,22 @@ export default class Profile extends Component {
 
     fetch(url).then((response) => {
       response.json().then((data) => {
-        this.setState({
-          ...this.state,
-          loading: false,
-          profileRepositories: data
-        });
+        if (response.ok) {
+          this.setState({
+            ...this.state,
+            loading: false,
+            profileRepositories: data,
+            favoriteLanguage: OhMyLib.maxOccurrence(OhMyLib.extractProperty(data, 'language'))
+          });
+        } else {
+          console.log(response);
+          this.setState({
+            ...this.state,
+            loading: false,
+            error: response.statusText
+          });
+        }
       });
-    }).catch((error) => {
-      this.setState({
-        ...this.state,
-        loading: false
-      })
     });
   }
 
@@ -45,10 +51,14 @@ export default class Profile extends Component {
   }
 
   renderPage() {
+    const { error, favoriteLanguage } = this.state;
     return (
       <section className="profile">
-        <div className="profile__header">
-          { this.props.match.params.profileName }
+        <div
+          className={ `profile__header
+             ${ error ? 'profile__header-error' : '' }
+             ${ favoriteLanguage || '' }` }>
+          { error || `${ this.props.match.params.profileName } loves ${ favoriteLanguage }` }
         </div>
         <ul className="profile__list">
           { this.renderRepositoryList() }
