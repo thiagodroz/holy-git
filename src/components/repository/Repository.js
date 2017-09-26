@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import language from './Languages';
 import './Repository.css';
 import './Languages.css';
 
 export default class Repository extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      repository: this.props.data
-    };
-  }
-
   render() {
-    const repository = this.state.repository;
+    const repository = this.props.data;
 
     if (!repository) {
       return null;
@@ -26,4 +19,11 @@ export default class Repository extends Component {
       </div>
     );
   }
+}
+
+Repository.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    language: PropTypes.string
+  }).isRequired
 }

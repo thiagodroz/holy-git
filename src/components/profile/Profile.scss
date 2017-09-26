@@ -1,0 +1,21 @@
+.profile {
+  margin: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+
+  &__header {
+    height: 6rem;
+    padding: 0 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFF;
+    font-size: 2rem;
+    line-height: 3;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}

@@ -1,5 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Ubuntu);
-@import url(//fonts.googleapis.com/css?family=Material+Icons);
+@import url(//fonts.googleapis.com/css?family=Ubuntu|Material+Icons);
 
 html {
   font-size: 62.5%;
@@ -15,7 +14,7 @@ body {
   display: inline-block;
   font-feature-settings: 'liga';
   font-family: 'Material Icons';
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 2.4rem;  /* Preferred icon size */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: normal;
