@@ -2,26 +2,25 @@
   width: 100%;
   height: 5rem;
   border-bottom: .1rem solid rgba(255, 255, 255, 0.2);
-}
 
-.header__brand {
-  padding: 0 1rem;
-  float: left;
-  color: #FFF;
-  font-size: 2.5em;
-  line-height: 2em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+  &__brand {
+    padding: 0 1rem;
+    float: left;
+    color: #FFF;
+    font-size: 2.5em;
+    line-height: 2em;
+    text-transform: uppercase;
+  }
 
-.header__menu {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 5rem;
-  height: 5rem;
-  float: right;
-  border-left: .1rem solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
+  &__menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    float: right;
+    border-left: .1rem solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
 }

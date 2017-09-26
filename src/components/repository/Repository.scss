@@ -3,24 +3,24 @@
   padding: 0 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   line-height: 3.5rem;
-}
 
-.repository:hover {
-  -webkit-transform: scale(1.015);
-  -ms-transform: scale(1.015);
-  transform: scale(1.015);
-  border: 1px solid #3e4d60;
-  background-color: #273444;
-  cursor: pointer;
-}
+  &:hover {
+    -webkit-transform: scale(1.015);
+    -ms-transform: scale(1.015);
+    transform: scale(1.015);
+    border: 1px solid #3e4d60;
+    background-color: #273444;
+    cursor: pointer;
+  }
 
-.repository__language-icon {
-  display: inline-block;
-  margin-right: 2rem;
-  font-size: 3rem;
-  vertical-align: middle;
-}
+  &__language-icon {
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 3rem;
+    vertical-align: middle;
+  }
 
-.repository__name {
-  display: inline-block;
+  &__name {
+    display: inline-block;
+  }
 }
