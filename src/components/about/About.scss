@@ -1,0 +1,37 @@
+.about {
+  margin: 2rem;
+
+  &-topic {
+    margin-bottom: 2rem;
+
+    &__title {
+      color: #FFF;
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      font-size: 1.6rem;
+      text-align: justify;
+    }
+
+    &__icon {
+      margin-right: 2rem;
+      color: #666;
+      font-size: 4rem;
+      text-decoration: none;
+      vertical-align: middle;
+
+      &:hover {
+        color: #999;
+      }
+    }
+
+    &__ref {
+      margin: 0 .5rem;
+      color: #999;
+      text-decoration: underline;
+    }
+  }
+}
