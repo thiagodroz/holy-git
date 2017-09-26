@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Menu.css';
 
 export default class Menu extends Component {
@@ -47,4 +48,8 @@ export default class Menu extends Component {
       </nav>
     );
   }
+}
+
+Menu.propTypes = {
+  isOpen: PropTypes.bool.isRequired
 }
