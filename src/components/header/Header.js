@@ -16,17 +16,21 @@ export default class Header extends Component {
   }
 
   onMenuClick() {
-    this.setState({
-      ...this.state,
-      menuIsOpen: true
-    });
+    if (!this.state.menuIsOpen) {
+      this.setState({
+        ...this.state,
+        menuIsOpen: true
+      });
+    }
   }
 
   onCloseMenu() {
-    this.setState({
-      ...this.state,
-      menuIsOpen: false
-    });
+    setTimeout(() => {
+      this.setState({
+        ...this.state,
+        menuIsOpen: false
+      });
+    }, 100);
   }
 
   render() {
@@ -37,7 +41,7 @@ export default class Header extends Component {
         <a href="/" className="header__brand">
           Holy Git!
         </a>
-        <div className="header__menu" onClick={ !menuIsOpen && this.onMenuClick }>
+        <div className="header__menu" onClick={ this.onMenuClick }>
           <i className="material-icons">menu</i>
           <Menu isOpen={ menuIsOpen } closeMenu={ this.onCloseMenu } />
         </div>
