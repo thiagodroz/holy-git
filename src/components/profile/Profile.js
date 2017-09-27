@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as OhMyLib from 'oh-my-lib';
+import OhMyLib from 'oh-my-lib';
 import './Profile.css';
 
 import Repository from '../repository/Repository';
@@ -52,13 +52,16 @@ export default class Profile extends Component {
 
   renderPage() {
     const { error, favoriteLanguage } = this.state;
+
+    const languageClass = favoriteLanguage ? `profile__header-${ favoriteLanguage.toLowerCase() }` : '';
+    const languageText = favoriteLanguage && favoriteLanguage != 'null' ? `loves ${ favoriteLanguage }` : '';
+
     return (
       <section className="profile">
         <div
-          className={ `profile__header
-             ${ error ? 'profile__header-error' : '' }
-             ${ favoriteLanguage || '' }` }>
-          { error || `${ this.props.match.params.profileName } loves ${ favoriteLanguage }` }
+          className={ `profile__header ${ error ? 'profile__header-error' : '' } ${ languageClass }` }>
+          { error ||
+            `${ this.props.match.params.profileName } ${ languageText }` }
         </div>
         <ul className="profile__list">
           { this.renderRepositoryList() }
