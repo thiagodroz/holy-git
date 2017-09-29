@@ -4,6 +4,7 @@
   border-bottom: none;
 
   &__header {
+    position: relative;
     height: 6rem;
     padding: 0 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -11,6 +12,23 @@
     font-size: 2rem;
     line-height: 3;
     text-transform: uppercase;
+    overflow: hidden;
+
+    &-error {
+      border-color: #e54242;
+      background-color: #e54242;
+    }
+
+    &-icon {
+      position: absolute;
+      top: -50%;
+      right: 0;
+      bottom: -50%;
+      font-size: 12rem;
+      line-height: 1;
+      opacity: .3;
+      z-index: -1;
+    }
   }
 
   &__list {

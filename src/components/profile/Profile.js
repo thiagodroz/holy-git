@@ -4,6 +4,7 @@ import './Profile.css';
 
 import Repository from '../repository/Repository';
 import Loader from '../loader/Loader';
+import language from '../repository/Languages';
 
 export default class Profile extends Component {
   constructor(props) {
@@ -54,12 +55,14 @@ export default class Profile extends Component {
     const { error, favoriteLanguage } = this.state;
 
     const languageClass = favoriteLanguage ? `profile__header-${ favoriteLanguage.toLowerCase() }` : '';
-    const languageText = favoriteLanguage && favoriteLanguage != 'null' ? `loves ${ favoriteLanguage }` : '';
+    const languageText = favoriteLanguage && favoriteLanguage !== 'null' ? `loves ${ favoriteLanguage }` : '';
+    const languageIcon = favoriteLanguage ? <i className={ `profile__header-icon ${ language(favoriteLanguage) }` }></i> : null;
 
     return (
       <section className="profile">
         <div
           className={ `profile__header ${ error ? 'profile__header-error' : '' } ${ languageClass }` }>
+          { languageIcon }
           { error ||
             `${ this.props.match.params.profileName } ${ languageText }` }
         </div>

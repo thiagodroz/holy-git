@@ -14,7 +14,7 @@ export default class Repository extends Component {
 
     return (
       <div className="repository">
-        <i className={ `repository__language-icon ${language(repository.language)}` }></i>
+        <i className={ `repository__language-icon ${ language(repository.language) }` }></i>
         <h3 className="repository__name">{ repository.name }</h3>
       </div>
     );
