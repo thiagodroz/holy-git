@@ -1,6 +1,6 @@
 {
   "name": "holy-git",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
