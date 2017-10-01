@@ -55,7 +55,6 @@ export default class Profile extends Component {
     const { error, favoriteLanguage } = this.state;
 
     const languageClass = favoriteLanguage ? `profile__header-${ favoriteLanguage.toLowerCase() }` : '';
-    const languageText = favoriteLanguage && favoriteLanguage !== 'null' ? `loves ${ favoriteLanguage }` : '';
     const languageIcon = favoriteLanguage ? <i className={ `profile__header-icon ${ language(favoriteLanguage) }` }></i> : null;
 
     return (
@@ -63,8 +62,7 @@ export default class Profile extends Component {
         <div
           className={ `profile__header ${ error ? 'profile__header-error' : '' } ${ languageClass }` }>
           { languageIcon }
-          { error ||
-            `${ this.props.match.params.profileName } ${ languageText }` }
+          { error || this.props.match.params.profileName }
         </div>
         <ul className="profile__list">
           { this.renderRepositoryList() }
